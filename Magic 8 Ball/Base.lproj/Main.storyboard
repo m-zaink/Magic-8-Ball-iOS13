@@ -16,35 +16,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ask Me Anything ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEm-9E-nUI">
-                                <rect key="frame" x="44" y="106" width="326" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ask Me Anything ..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5j-OV-XRn">
+                                <rect key="frame" x="44" y="76" width="326" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bGI-5l-JeJ">
-                                <rect key="frame" x="72" y="313" width="270" height="270"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yY-jc-Nhi">
-                                <rect key="frame" x="155" y="681" width="105" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake Your Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bXx-QK-EYM">
+                                <rect key="frame" x="82" y="791" width="250" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Ask">
-                                    <color key="titleColor" red="0.49019607843137253" green="0.82352941176470584" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="askButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="72C-86-5J6"/>
-                                </connections>
-                            </button>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MgC-dU-DMz">
+                                <rect key="frame" x="72" y="313" width="270" height="270"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="2ao-Hy-VHJ"/>
+                                    <constraint firstAttribute="height" constant="270" id="MSI-hj-XjW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.49019607843137253" green="0.82352941176470584" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="bXx-QK-EYM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GUd-Hl-NVF"/>
+                            <constraint firstItem="Y5j-OV-XRn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Myw-ey-Wkh"/>
+                            <constraint firstItem="Y5j-OV-XRn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="S2u-Cr-Xjs"/>
+                            <constraint firstItem="MgC-dU-DMz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uyi-3E-Xyl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXx-QK-EYM" secondAttribute="bottom" constant="32" id="YW9-iF-BOU"/>
+                            <constraint firstItem="MgC-dU-DMz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="slK-yk-7tr"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="ballImageView" destination="bGI-5l-JeJ" id="QeU-LK-XnS"/>
+                        <outlet property="ballImageView" destination="MgC-dU-DMz" id="jf5-XJ-TOD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

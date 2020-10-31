@@ -11,11 +11,18 @@ import UIKit
 class ViewController: UIViewController {
     
     let ballArray = [#imageLiteral(resourceName: "ball1.png"),#imageLiteral(resourceName: "ball2.png"),#imageLiteral(resourceName: "ball3.png"),#imageLiteral(resourceName: "ball4.png"),#imageLiteral(resourceName: "ball5.png")]
-
+    
     @IBOutlet weak var ballImageView: UIImageView!
     
-    @IBAction func askButtonPressed(_ sender: UIButton) {
-        ballImageView.image = ballArray.randomElement()
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            ballImageView.image = ballArray.randomElement()
+        }
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            ballImageView.image = ballArray.randomElement()
+        }
     }
 }
-
